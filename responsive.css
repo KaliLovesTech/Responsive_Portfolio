@@ -1,0 +1,215 @@
+@media screen and (max-width: 650px) {
+  /* navbar responsive styling */
+  /* .navbar a.home {
+    background: #cc540e;
+  }
+  .navbar a:hover {
+    background: #4e4e4e;
+  } */
+  nav {
+    padding: 2rem;
+  }
+  .navbar ul .nav-toggle {
+    display: none;
+  }
+  .nav-toggle li a {
+    font-size: 24px;
+  }
+  #button-nav {
+    display: none;
+  }
+
+  /* navbar logo styling */
+  .content {
+    position: relative;
+  }
+
+  .content h2 {
+    color: var(--accent-color);
+    font-size: 3rem;
+    padding-top: 3rem;
+    padding-left: 6rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .content h2:nth-child(1) {
+    color: transparent;
+    /* change the colors of the letter outline */
+    -webkit-text-stroke: 2px var(--text-color2);
+  }
+
+  .content h2:nth-child(2) {
+    /* changes the color of the liquid on first letter  */
+    color: var(--accent-color);
+    animation: animate 4s ease-in-out infinite;
+  }
+
+  @keyframes animate {
+    0%,
+    100% {
+      clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+
+    50% {
+      clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+  }
+
+  .content h2:nth-child(2):hover {
+    color: var(--text-color2);
+  }
+  /* end navbar logo styling */
+
+  /* hamburger menu styling */
+  .navbar.open ul {
+    display: block;
+  }
+  .navbar.open .nav-toggle {
+    display: block;
+  }
+  .navbar.open a {
+    display: block;
+  }
+  .nav-toggle li a {
+    color: var(--accent-color);
+  }
+
+  nav ul li a:hover {
+    color: var(--text-color2);
+    transition: 0.3s;
+  }
+
+  .navbar .nav-toggle {
+    display: none;
+  }
+
+  .navbar .icon-close {
+    display: none;
+  }
+
+  .navbar .hamburger {
+    display: block;
+    border: none;
+    background-color: transparent;
+    color: var(--accent-color);
+  }
+  .icon-open svg {
+    width: 48px;
+    height: 48px;
+  }
+  .icon-close svg {
+    width: 48px;
+    height: 48px;
+  }
+  .icon-close {
+    padding-bottom: 500px;
+  }
+
+  .navbar.open .hamburger .icon-open {
+    display: none;
+  }
+  .navbar.open .hamburger .icon-close {
+    display: block;
+  }
+  /* end hamburger menu styling */
+
+  /* end navbar responsive styling */
+
+  /* home section responsive styling */
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    /* margin-top: 200px; */
+    /* padding-bottom: 50px; */
+  }
+  .home-button-container {
+    padding-top: 24px;
+    cursor: pointer;
+  }
+  #home-button {
+    padding: 10px 25px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: var(--text-color2);
+    background-color: var(--bg-dark-blue);
+    border: 1px solid var(--accent-color);
+  }
+  /* Animated Text styling */
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .wrapper .static-txt {
+    color: var(--text-color2);
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .wrapper .dynamic-txts {
+    margin-left: 8px;
+    height: 90px;
+    overflow: hidden;
+  }
+
+  .dynamic-txts li {
+    list-style: none;
+    color: var(--accent-color);
+    font-size: 30px;
+    font-weight: 500;
+    top: 0;
+    position: relative;
+    animation: slide 12s steps(4) infinite;
+  }
+
+  @keyframes slide {
+    100% {
+      top: -360px;
+    }
+  }
+
+  .dynamic-txts li {
+    position: relative;
+    line-height: 90px;
+  }
+
+  .dynamic-txts li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-dark-blue);
+    border-left: 2px solid var(--accent-color);
+    animation: typing 3s steps(13) infinite;
+  }
+
+  @keyframes typing {
+    40%,
+    60% {
+      left: calc(100% + 30px);
+    }
+    100% {
+      left: 0;
+    }
+  }
+  /* animated text ends */
+
+  /* socialmedia icons left */
+  .left-side-navbar {
+    /* border: 1px solid #333; */
+    position: -webkit-sticky;
+    position: sticky;
+    float: left;
+    /* height: 250px; */
+    width: 70px;
+    /* box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4); */
+  }
+  /* end socialmedia icons left */
+
+  /* end home section responsive styling */
+}
